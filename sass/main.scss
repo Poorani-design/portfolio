@@ -1,0 +1,19 @@
+@import "./abstract/variable";
+//base
+@import "./base/reset";
+// @import "./base/global";
+//utilities
+@import "./utilities/animation";
+//layout
+//1.Headersection
+@import "./layout/header";
+@import "./layout/background_elements";
+
+//component
+@import "./components/button";
+//pages
+@import "./pages/hero";
+@import "./pages/about";
+@import "./pages/footer";
+@import "./pages/card";
+@import "./pages/experience";

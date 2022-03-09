@@ -1,0 +1,15 @@
+.experience
+{
+ background-color: $text-dark;
+ color:$text-light;
+ padding:3rem 11rem;
+ line-height: 3;
+ &--title
+ {
+  text-align: center;
+ }
+ &--desc
+ {
+  font-size:18px;
+ }
+}

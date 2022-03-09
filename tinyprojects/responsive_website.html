@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Responsive Website</title>
+ <style>
+    *
+    {
+      margin:0;
+      padding:0;
+      font-family:'Poppins',sans-serif;
+    }
+    body{
+     box-sizing: border-box;
+    }
+   header
+   {
+     background-color: #e91e63;
+     padding:100px;
+     text-align: center;
+     justify-content: center;
+     color:#efefef;
+     font-size:30px;
+   }
+   nav
+   {
+    overflow:hidden;
+    background-color: #2b2b2b;  
+   
+   }
+   nav>a
+   {
+    padding:15px 16px;
+    float:left;
+    display: block;
+    text-decoration: none;
+    color:#efefef;   
+   }
+   nav>a:hover
+   {
+     background-color:#673ab7;
+   }
+   .img
+    {
+       background-color: #a1a1a1;
+       padding:40px;
+       margin:25px;
+       color:#696969;
+    }
+   .right
+  {
+   float:right;
+  }
+  .row
+  {
+   display:flex;
+   display:-ms-flexbox; 
+  }
+  .side
+  {
+   -ms-flex:30%;
+   flex:30%;
+   padding:20px;
+   background-color: #e2e2e0;  
+
+  }
+  p
+  {
+   padding:15px;
+   line-height: 25px;
+  }
+  .main
+  {
+   -ms-flex: 70%;
+   flex:70%;
+   padding:20px;
+   background-color: #eeeeee;
+  }
+  footer
+  {
+   background-color: #e91e63;
+     padding:80px;
+     text-align: center;
+     color:#efefef;
+     font-size:30px;
+  }
+  h1,h2,h3,h4,h5,h6
+ {
+   color:#673ab7;
+   font-weight:bold;
+ }
+@media screen and (max-width:700px) {
+ .row{
+  flex-direction: column;
+ }
+}
+@media screen and (max-width:400px)
+{
+ nav>a{
+  width:100%;
+  float: none;
+ }
+}
+ </style>
+</head>
+<body>
+         <header>
+                 <h1 style="color:#fff;line-height: 65px;">My Responsive Website</h1><br/>
+                 <i>Without using framework</i>
+
+         </header>
+         <nav>
+                 <a href="#">HOME</a>
+                 <a href="#">ABOUT</a>
+                 <a href="#">SERVICE</a>
+                 <a href="#" class="">CONTACT</a>
+         </nav>
+       <div class="row">
+         <div class="side">
+           <h2>About us</h2><br>
+           <p>Some text</p>
+           <div class="img" style="height: 70px;">Image</div>
+
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore soluta, ea repellendus commodi amet natus est, autem accusantium quod nihil veniam recusandae, aliquam assumenda vero quo minus tempore eveniet!</p>
+
+           <h3>Recent Post</h3>
+
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore soluta, ea repellendus commodi amet natus est, autem accusantium quod nihil veniam recusandae, aliquam assumenda vero quo minus tempore eveniet!</p>
+
+            <div class="img" style="height: 10px;">Image</div> 
+            <div class="img" style="height: 10px;">Image</div>
+            <div class="img" style="height: 10px;">Image</div>
+         </div>
+
+         <div class="main">
+           <h2>TITLE AND DESCRIPTION</h2><br>
+           <p>January, 2022, 01</p><br>
+           <div class="img" style="height: 150px;">Image</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore soluta, ea repellendus commodi amet natus est, autem accusantium quod nihil veniam recusandae, aliquam assumenda vero quo minus tempore eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore soluta, ea repellendus commodi amet natus est, autem accusantium quod nihil veniam recusandae, aliquam assumenda vero quo minus tempore eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore soluta, ea repellendus commodi amet natus est, autem accusantium quod nihil veniam recusandae, aliquam assumenda vero quo minus tempore eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore soluta, ea repellendus commodi amet natus est, autem accusantium quod nihil veniam recusandae, aliquam assumenda vero quo minus tempore eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore soluta, ea repellendus commodi amet natus est, autem accusantium quod nihil veniam recusandae, aliquam assumenda vero quo minus tempore eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore soluta, ea repellendus commodi amet natus est, autem accusantium quod nihil veniam recusandae, aliquam assumenda vero quo minus tempore eveniet!</p>
+           
+           <div class="img" style="height: 80px;">Image</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore soluta, ea repellendus commodi amet natus est, autem accusantium quod nihil veniam recusandae, aliquam assumenda vero quo minus tempore eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore soluta, ea repellendus commodi amet natus est, autem accusantium quod nihil veniam recusandae, aliquam assumenda vero quo minus tempore eveniet!</p> 
+           <div class="img" style="height: 80px;">Image</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore soluta, ea repellendus commodi amet natus est, autem accusantium quod nihil veniam recusandae, aliquam assumenda vero quo minus tempore eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore soluta, ea repellendus commodi amet natus est, autem accusantium quod nihil veniam recusandae, aliquam assumenda vero quo minus tempore eveniet!</p>
+         </div>
+       </div>
+       <footer>
+          It's My footer
+       </footer>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Form Validation</title>
+ <script>
+
+  // EMAIL AND PASSWORD VALIDATION
+   function email_password_validation()
+   {
+     var email = document.myform.email.value;
+     var password = document.myform.password.value;
+     if(email == "")
+     {
+        alert("Email is mandatory");
+        document.myform.email.focus();
+        return false;
+
+     }else if(password==""){
+      alert("Password is mandatory");
+      
+      document.myform.password.focus();
+      return false;
+
+     }else{
+      alert("Validation Successful");
+      return true;
+     }
+   }
+
+   // NUMBER VALIDATION 
+   function number_validation()
+   {
+     var x = document.numform.number.value;
+  
+     if(isNaN(x) || x<1 ||x>10)
+     {
+      alert("Please enter a valid number between  one to ten");
+      document.numform.number.focus();
+      return false;
+     }
+     else
+     {
+       alert("Validation Successful");
+       return true;
+     }
+
+   }
+
+   // SELECTBOX VALIDATION
+   function select_option()
+   {
+      var x = document.choosecolor.color.value;
+      if(x=="")
+      {
+        alert("You can choose atlease one color");
+        document.choosecolor.color.focus();
+        return false;
+      }
+      else
+      {
+        alert("validation success");
+        return true;
+      }
+   }
+
+   // CHECKBOX VALIDATION
+   function checkbox_validation()
+   {
+        var valid= false;
+
+        if(document.getElementById("javascript").checked)
+        {
+         valid = true;
+        } else if(document.getElementById("angular").checked)
+        {
+         valid = true;
+        } else if(document.getElementById("react").checked)
+        {
+         valid = true;
+        } else if(document.getElementById("node").checked)
+        {
+         valid = true;
+        } if(valid)
+       {
+        alert("Validation successfull");
+       }
+        else
+        {
+         confirm("must select any one technology");
+         return false;
+        }
+   }
+
+   // PAYMENT VALIDATION 
+   function payment_validation()
+   {
+     var valid = false;
+   
+     var x = document.paymentname.payment.checked;
+     for(var i=0;i<x.length;i++)
+     {
+       if(x[i].checked)
+       {
+        valid = true;
+        break;
+       }
+       else
+       {
+         valid = false;
+         alert("failed");
+         break;
+       }
+      }
+      if(valid)
+      {
+       alert("validation successfull");
+      
+      }
+       else
+       {
+        alert("you must select atleast single payment");
+        valid=false;
+      
+       }
+
+     
+   }
+ </script>
+</head>
+<body>
+  <!-- EMAIL AND PASSWORD REGISTRAION FORM -->
+  <h2>Email and Password Validation : </h2>
+ <form name="myform" method="POST" action="registration.jsp" onsubmit="return email_password_validation()">
+   Email : <input type="email" name="email"/><br/><br/>
+   Password : <input type="password" name="password"/>
+  <br/><br/>
+  
+  <input type="submit" value="submit"/>
+ </form> 
+<!-- MOBILE NUMBER VALIDATION -->
+<h2>Number validation  1 to 10 : </h2>
+ <form name="numform" method="POST" action="registration.jsp" onsubmit="return number_validation()">
+  Enter a number : <input type="text" name="number"/>
+  
+ <br/><br/>
+ 
+ <input type="submit" value="submit"/>
+</form>
+<!-- SELECT OPTION VALIDATION -->
+<h2>choose color : </h2>
+   <form name="choosecolor" method="post" action="registration.jsp" onsubmit="return select_option()">
+         <select name="color">
+                <option value="">Choose your category</option>
+                <option value="blue">Slimming</option>
+                <option value="green">coolsculpting</option>  
+                <option value="yellow">option</option>
+         </select>
+         <input type="submit" value="submit"/>
+   </form>
+
+<h2>checkbox validation : </h2>
+
+   <form name="checkboxname" method="post" action="registration.jsp" onsubmit="return checkbox_validation()">
+      <input type="checkbox" value="javascript" id="javascript"/>Javascript&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" value="angular" id="angular"/>angular&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" value="react" id="react"/>React&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" value="node" id="node"/>Node&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="submit" value="submit"/>
+   </form>
+
+    <!-- <h2>RadioButton validation : <strong style="color:red;">Some mistake is there</strong> </h2>
+   <form name="paymentname" method="POST" action="payment.jsp" onsubmit="return payment_validation();"> 
+     <input type="radio" name="paymentmethod" value="cash-on-delivery"/>Cash on Delivery
+     <input type="radio" name="paymentmethod" value="credit-card"/>Credit card
+     <input type="radio" name="paymentmethod" value="debit-card"/>Debit card
+     <input type="submit" name="submit">
+   </form> -->
+
+
+   ^[a-zA-Z0-9]+$
+
+</body>
+</html>

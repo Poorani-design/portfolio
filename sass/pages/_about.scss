@@ -1,0 +1,40 @@
+.about-section
+{
+ display: flex;
+ padding:1rem 5rem;
+ justify-content: space-between;
+ align-items: center;
+ height: 100%;
+ &--img
+ {
+  padding:2rem;
+ }
+ &-mail-btn
+ {
+  color:$text-white;
+  font-weight: bold;
+  padding:36px;
+  border-radius: 4px;
+  background-image: radial-gradient( circle 860px at 11.8% 33.5%,  rgba(240,30,92,1) 0%, rgba(244,49,74,1) 30.5%, rgba(249,75,37,1) 56.1%, rgba(250,88,19,1) 75.6%, rgba(253,102,2,1) 100.2% );
+ }
+ 
+  &--content--desc{
+   line-height: 3;
+   padding:30px;
+   
+  }
+ 
+}
+.aboutimg
+{
+  height: 480px;
+  width:480px;
+  border-radius: 50%;
+  border:5px solid $bg-primary;
+  transition: 250ms;
+ 
+}
+.aboutimg:hover
+{
+  border:5px solid $text-dark;
+}

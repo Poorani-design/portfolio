@@ -1,0 +1,47 @@
+.card-section
+{
+ padding:3rem 7rem;
+ align-items: $align-center;
+ background-color: $text-white;
+ border-top:1px solid $text-light;
+ &-title
+ {
+  text-align: center;
+ }
+ &-sub
+ {
+  display: $display-flex;
+  padding:25px;
+  align-items: $align-center;
+  justify-content: space-around;
+ }
+ &-1 >a >img
+ {
+  height: 180px;
+  width:180px;
+  border-radius: 50%;
+  border:5px solid $text-light;
+  align-items: center;
+  
+ }
+ &-1 >a >img:hover{
+  border:5px solid $bg-primary;
+  animation: ripple 1.5s ease-out infinite;
+ }
+
+}
+.divbox
+{
+ height:50px;
+ width:50px;
+ padding:30px;
+ background-color: $bg-primary;
+ color:$text-white;
+ 
+ text-align: center;
+}
+
+.card-section-1 > h4{
+ align-items: center;
+ text-align: center;
+}

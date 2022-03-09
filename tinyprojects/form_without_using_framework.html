@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>CSS FORM</title>
+
+ <style>
+  *
+  {
+   box-sizing: border-box;
+   background-color: #f7f2f2;
+  }
+  *:focus {
+    outline: none;
+}
+  label
+  {
+   font-size: x-large;
+  }
+  legend
+  {
+   font-size: xx-large;
+   font-weight: bolder;
+   color:#2a9d2a;
+  }
+  fieldset
+  {
+   width:100%;
+   background-color:#e2e1e1;
+   
+   border:none;
+   border-radius:10px;
+  }
+  form
+  {
+   padding:40px;
+  }
+    input[type=text]
+    {
+      width: 100%;
+      padding: 12px 10px;
+      border:none;
+      border-bottom:2px solid #03b97d;
+
+    }
+    input[type=submit]
+    {
+     width:100%;
+     background-color: #03b97d;
+     font-size: larger;
+     color: #fff;
+     padding:15px;
+     border:none;
+     border-radius: 10px;
+    }
+    input[type=submit]:hover
+    {
+     background-color: #2a9d2a;
+    }
+    input[type=text]:focus
+    {
+     outline: none;
+    }
+    h2
+    {
+     text-align: center;
+
+    }
+    select
+    {
+     width: 100%;
+      padding: 12px 10px;
+      border:none;
+      border-bottom:2px solid #03b97d;
+    }
+    
+ </style>
+</head>
+<body>
+ 
+ <h2>Basic Form Page - Without using Framework</h2>
+  <fieldset>
+    <legend>
+       Application form
+    </legend>
+    <form action="javascript:void(0);" autocomplete="off">
+    <label>First Name : </label><br/><br/>
+          <input type="text" required placeholder="Enter your first name"><br/><br/>
+    <label>Last Name : </label><br/><br/>
+    <input type="text" placeholder="Enter your last name"><br/><br/>
+    <label>Email : </label><br/><br/>
+    <input type="text" required  placeholder="Enter your email address"><br/><br/>
+    <label>Mobile Number : </label><br/><br/>
+    <input type="text" placeholder="Enter your mobile number"><br/><br/>
+    <label>Select your Favourite Language : </label><br/><br/>
+   <select >
+     <optgroup label="Frontend">
+          <option value="" disabled selected hidden>Choose any domain</option>
+          <option value="">HTML</option>
+          <option value="">CSS</option>
+          <option value="">JS</option>
+          <option value="">Angular</option>
+          <option value="">React</option>
+     </optgroup>
+
+     <optgroup label="Backend">
+         <option value="">PHP</option>
+         <option value="">Node JS</option>
+         <option value="">MySQL</option>
+     </optgroup>
+    
+   </select><br/><br/>
+    <input type="submit" value="Submit">  
+    
+   </form>
+  </fieldset>
+</body>
+</html>

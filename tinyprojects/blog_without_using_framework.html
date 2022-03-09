@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Blog Layout</title>
+ <style>
+  html
+  {
+   scroll-behavior: smooth;
+  }
+   *
+   {
+       box-sizing: border-box;
+       margin:0;
+       padding:0;
+   }
+   .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  width:100%;
+  padding:25px;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+  header
+  {
+   background-color: #2e2e2e;
+   padding:35px;
+   font-size:35px;
+   font-weight:bolder;
+   text-align: center;
+   color:#efefef;
+   
+  }
+  aside>ol>li
+  {
+   padding: 10px;
+   padding-left: 40px;
+   list-style-type: none;
+   font-size: large;
+  }
+  aside
+  {
+   font-size: xx-large;
+   position: sticky;
+  }
+  footer
+  {
+   font-size: 25px;
+   padding:35px;
+   text-align: center;
+   background-color:#2e2e2e;
+   color:#fff;
+   font-weight: bold;
+  }
+  menu
+  {
+   padding:0;
+   margin:0;
+  }
+
+  ul>li
+  {
+   padding: 20px;
+   list-style-type: none;
+   
+   background-color:#233253;
+   font-size: large; 
+   margin:15px;
+   color:#fff;
+   box-shadow: 2px 5px 5px 6px #e0dfdf;
+  }
+  ul>li:hover
+  {
+   background-color:#313131;
+   
+   cursor: pointer;
+   transition: 0.5s;
+   box-shadow: 2px 5px 5px 6px #efefef;
+  }
+  article
+  {
+   padding:30px;
+   line-height: 30px;
+   font-size:20px;
+  }
+  .food-card
+  {
+   padding:15px;
+  }
+  .food-card>.card{
+   border:1px solid black;
+  }
+  ol>li:hover
+  {
+   color:#2e2e2e;
+   font-weight: bold;
+   cursor: pointer;
+  }
+  img
+  {
+   display: block;
+   height: auto;
+  }
+  .card
+  {
+   position:relative;
+  }
+  .overlay
+  {
+   position:absolute;
+   background-color: #2e2e2e;
+   height: 100%;
+   opacity: 0;
+   width: 100%;
+   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 1s;
+   
+  }
+  .card:hover .overlay
+  {
+   opacity:0.8;
+  }
+  .text
+  {
+   top:50%;
+   left:50%;
+   position: absolute;
+   font-size: medium;
+   cursor: pointer;
+   color:#fff;
+   -webkit-animation: translate(-50%,-50%);
+   -ms-transform:translate(-50%,-50%);
+   transform:translate(-50%,-50%);
+   text-align: center;
+  }
+  td
+  {
+    padding:10px;
+    
+  }
+  tr
+  {
+    cursor: pointer;
+    margin: 0;
+  }
+  tr:hover{
+    background-color: #e0dfdf;
+  }
+ </style>
+</head>
+<body>
+  <main>
+        <header>
+          <nav>
+           <div>
+            Foodie Blog (Without using Boostrap framework)
+           </div>
+          </nav>
+        </header>
+        <section>
+          <div class="row">
+            <div class="col-3 col-s-3 menu" >
+              <ul>
+                   <li>Dosa receipe</li>
+                   <li>Chicken Tikka</li>
+                   <li>Mutton Tikka</li>
+                   <li>Chicken Burger</li>
+                   <li>Paneer Pizza</li>
+                   <li>Biryani</li>
+                   <li>Mushroom</li>
+              </ul>
+            </div>
+            <div class="col-6 col-s-9">
+              <article>
+               A foodie is a person who has an ardent or refined interest in food, 
+               and who eats food not only out of hunger but also as a hobby. The related 
+               terms "gastronome" and "gourmet" define roughly the same thing, 
+               i.e. a person who enjoys food for pleasure. A foodie is a person who has an ardent or refined interest in food, 
+               and who eats food not only out of hunger but also as a hobby. The related 
+               terms "gastronome" and "gourmet" define roughly the same thing, 
+               i.e. a person who enjoys food for pleasure. A foodie is a person who has an ardent or refined interest in food, 
+               and who eats food not only out of hunger but also as a hobby. The related 
+               terms "gastronome" and "gourmet" define roughly the same thing, 
+               i.e. a person who enjoys food for pleasure. A foodie is a person who has an ardent or refined interest in food, 
+               and who eats food not only out of hunger but also as a hobby. The related 
+               terms "gastronome" and "gourmet" define roughly the same thing, 
+               i.e. a person who enjoys food for pleasure. A foodie is a person who has an ardent or refined interest in food, 
+               and who eats food not only out of hunger but also as a hobby. The related 
+               terms "gastronome" and "gourmet" define roughly the same thing, 
+               i.e. a person who enjoys food for pleasure. A foodie is a person who has an ardent or refined interest in food, 
+               and who eats food not only out of hunger but also as a hobby. The related 
+               terms "gastronome" and "gourmet" define roughly the same thing, 
+               i.e. a person who enjoys food for pleasure. 
+               i.e. a person who enjoys food for pleasure. A foodie is a person who has an ardent or refined interest in food, 
+               and who eats food not only out of hunger but also as a hobby. The related 
+               terms "gastronome" and "gourmet" define roughly the same thing, 
+               i.e. a person who enjoys food for pleasure. A foodie is a person who has an ardent or refined interest in food, 
+               and who eats food not only out of hunger but also as a hobby. The related 
+               terms "gastronome" and "gourmet" define roughly the same thing, 
+               i.e. a person who enjoys food for pleasure. A foodie is a person who has an ardent or refined interest in food, 
+               and who eats food not only out of hunger but also as a hobby. The related 
+               terms "gastronome" and "gourmet" define roughly the same thing, 
+               i.e. a person who enjoys food for pleasure.
+              </article>
+            </div>
+            <div class="col-3 col-s-12">
+             <aside>
+               Recent Post
+               <ol>
+                <li>Breakfast / Brunch</li>
+                <li>Lunch</li>
+                <li>Dinner</li>
+                <li>Healthy food</li>
+                <li>Soup</li>
+                <li>Juice</li>
+                <li>Salads</li>
+           </ol>
+           Popular Receipe
+              <div class="p1 col-12">
+                <table>
+                  <tr>
+                    <td>
+                      <div style="height:50px;width:50px;background-color: #9b9b9b;" class=""></div></td>
+                    <td>
+                     <div  class="" style="font-size:medium;">Fish fry<br>
+                         <a href="javascript:void(0);" style="text-decoration: ;color:#2e2e2e">Read more</a></div>
+                     </div>
+                    </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="height:50px;width:50px;background-color: #9b9b9b;" class=""></div></td>
+                  <td>
+                   <div  class="" style="font-size:medium;">chicken fry<br>
+                       <a href="javascript:void(0);" style="text-decoration: ;color:#2e2e2e">Read more</a></div>
+                   </div>
+                  </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="height:50px;width:50px;background-color: #9b9b9b;" class=""></div></td>
+                <td>
+                 <div  class="" style="font-size:medium;">Mushroom Biryani<br>
+                     <a href="javascript:void(0);" style="text-decoration: ;color:#2e2e2e">Read more</a></div>
+                 </div>
+                </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="height:50px;width:50px;background-color: #9b9b9b;" class=""></div></td>
+              <td>
+               <div  class="" style="font-size:medium;">Evening snacks<br>
+                   <a href="javascript:void(0);" style="text-decoration: ;color:#2e2e2e">Read more</a></div>
+               </div>
+              </td>
+          </tr>
+                </table>
+               
+             </aside>
+           </div>
+          </div>
+          <div class="row food-card">
+            <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:#233253;">Our cookbook, Love Real Food, is here! </h1>
+                    <div class="col-3 col-s-3">
+                        <div class="card">
+                          <figure>
+                            <img height="100%" width="100%" src="https://media.istockphoto.com/photos/table-top-view-of-spicy-food-picture-id1316145932?s=612x612">
+                            <div class="overlay">
+                               <div class="text">Read more</div>
+                            </div>
+                           
+                          
+                          </figure>
+                        </div>
+                   </div>
+                   <div class="col-3 col-s-3">
+                       <div class="card">
+                        <figure>
+                         <img  height="100%" width="100%" 
+                         src="https://media.istockphoto.com/photos/slice-of-pizza-isolated-on-white-background-picture-id1295596568?s=612x612">
+                         <div class="overlay">
+                          <div class="text">Read more</div>
+                       </div>
+                       </figure>
+                       </div>
+                  </div>
+                  <div class="col-3 col-s-3">
+                   <div class="card">
+                    <figure>
+                     <img  height="100%" width="100%"src="https://media.istockphoto.com/photos/cheesy-pepperoni-pizza-picture-id938742222?s=612x612">
+                     <div class="overlay">
+                      <div class="text">Read more</div>
+                   </div>
+                   </figure>
+                   </div>
+              </div>
+              <div class="col-3 col-s-3">
+               <div class="card">
+                <figure>
+                 <img  height="100%" width="100%"src="https://media.istockphoto.com/photos/traditional-festive-food-picture-id505990652?s=612x612">
+                 <div class="overlay">
+                  <div class="text">Read more</div>
+               </div>
+               </figure>
+               </div>
+            </div>
+                  
+          </div><div class="row food-card">
+         
+                    <div class="col-3 col-s-3">
+                        <div class="card">
+                          <figure>
+                            <img height="100%" width="100%" src="https://cdn.pixabay.com/photo/2010/12/13/10/05/berries-2277_960_720.jpg">
+                            <div class="overlay">
+                               <div class="text">Read more</div>
+                            </div>
+                           
+                          
+                          </figure>
+                        </div>
+                   </div>
+                   <div class="col-3 col-s-3">
+                       <div class="card">
+                        <figure>
+                         <img  height="100%" width="100%" 
+                         src="https://cdn.pixabay.com/photo/2015/10/02/15/59/olive-oil-968657_960_720.jpg">
+                         <div class="overlay">
+                          <div class="text">Read more</div>
+                       </div>
+                       </figure>
+                       </div>
+                  </div>
+                  <div class="col-3 col-s-3">
+                   <div class="card">
+                    <figure>
+                     <img  height="100%" width="100%"src="https://cdn.pixabay.com/photo/2017/01/26/02/06/platter-2009590__340.jpg">
+                     <div class="overlay">
+                      <div class="text">Read more</div>
+                   </div>
+                   </figure>
+                   </div>
+              </div>
+              <div class="col-3 col-s-3">
+               <div class="card">
+                <figure>
+                 <img  height="100%" width="100%"src="https://cdn.pixabay.com/photo/2017/01/11/11/33/cake-1971552__340.jpg">
+                 <div class="overlay">
+                  <div class="text">Read more</div>
+               </div>
+               </figure>
+               </div>
+            </div>
+                  
+          </div>
+        </section>
+        <footer>
+         <div class="footer">
+           <p>Copyright reserved &copy; 2022</p>
+          </div>
+        </footer>
+  </main>
+</body>
+</html>

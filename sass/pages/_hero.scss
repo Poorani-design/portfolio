@@ -1,0 +1,20 @@
+.hero-area
+{
+ display: flex;
+ padding:5rem 13rem;
+ justify-content: space-around;
+ align-items: center; 
+ &-title
+ {
+  font-weight:bold;
+  font-size:25px;
+  color:#050505;
+
+  font-family: $font-secondary;
+ }
+ &-disc
+ {
+  line-height: 2;
+  padding-bottom: 1rem;
+ }
+}

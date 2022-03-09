@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive navbar</title>
+  <style>
+    body
+    {
+      margin:0;
+      padding:0;
+      font-family:'Poppins',sans-serif ;
+    }
+    footer
+      {
+        padding:35px;
+
+        color:#fff;
+        text-align: center;
+        font-weight: bolder;
+        font-size:20px;
+        background-color: #06000c;
+      }
+     .navclass
+     {
+       background-color: #06000c;
+       overflow: hidden; 
+     }
+     .navclass>a
+     {
+       color:#fff;
+       text-decoration: none;
+       font-size:19px;
+       font-weight: bold;
+       padding:26px;
+       float:left;
+       display: block;
+       transition: 0.5s;       
+     }
+     a.icon
+     {
+       display: none;
+     }
+     article
+      {
+        margin:15px;
+      }
+
+     p{
+       font-size: 20px;
+       line-height: 29px;
+     }
+      .navclass>a:hover
+      {
+        color:#141414;
+        background-color: #ffe346;
+        border-radius: 7px;
+        
+      }
+     @media screen and (max-width:600px){
+       .navclass>a:not(:first-child){
+         display:none ;
+       }.navclass>a.icon{
+         display:block;
+         float: right;
+       }       
+     }
+
+     @media screen and (max-width:600px)
+     {
+      .navclass.responsive>a
+     {
+       float:none;
+       position: relative;
+       display: block;
+       text-align: left;
+     }
+    .navclass.responsive>a.icon
+        {
+          position: absolute;
+          top:54px;
+          right:0;
+        }
+      
+     }
+     nav
+     {
+        color:#292929;
+        background-color: #00ddc7;
+        font-weight: bold;
+        padding:15px;
+        font-size:20px;   
+        text-align: center;
+      }
+     
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div>
+      First 10 order get 50% offer and Free Delivery 
+    </nav></div>
+    <div id="navid" class="navclass">
+        <a href="">Home</a>
+        <a href="">Contact</a>
+        <a href="">Service</a>
+        <a href="">Blog</a>
+        <a href="">News</a>
+        <a href="javascript:void(0)" class="icon" onclick="myfunction();">&#9776;</a>
+    </div>
+    
+  </header>
+  <section>
+      <article>
+          <h2>Title and Description</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam at debitis nobis ducimus modi tenetur, quibusdam perferendis inventore delectus repudiandae, assumenda distinctio, hic dolores dolorem aut atque facilis molestiae enim.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam at debitis nobis ducimus modi tenetur, quibusdam perferendis inventore delectus repudiandae, assumenda distinctio, hic dolores dolorem aut atque facilis molestiae enim.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam at debitis nobis ducimus modi tenetur, quibusdam perferendis inventore delectus repudiandae, assumenda distinctio, hic dolores dolorem aut atque facilis molestiae enim.
+          </p>
+          <div style="background-color: #e3e3e3;padding:30px;height:350px;border-radius: 6px;">Image</div>  
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam at debitis nobis ducimus modi tenetur, quibusdam perferendis inventore delectus repudiandae, assumenda distinctio, hic dolores dolorem aut atque facilis molestiae enim.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam at debitis nobis ducimus modi tenetur, quibusdam perferendis inventore delectus repudiandae, assumenda distinctio, hic dolores dolorem aut atque facilis molestiae enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam at debitis nobis ducimus modi tenetur, quibusdam perferendis inventore delectus repudiandae, assumenda distinctio, hic dolores dolorem aut atque facilis molestiae enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam at debitis nobis ducimus modi tenetur, quibusdam perferendis inventore delectus repudiandae, assumenda distinctio, hic dolores dolorem aut atque facilis molestiae enim.
+          </p>
+          <div style="background-color: #e3e3e3;padding:30px;height:350px;border-radius: 6px;">Image</div>
+      </article>
+  </section>
+  <footer>
+    Copyright reserved &copy; 2022 
+  </footer>
+  <script>
+    function myfunction()
+    {
+      var x=document.getElementById("navid");
+
+      if(x.className === "navclass")
+      {
+        x.className += " responsive";
+      }
+      else{
+        x.className = "navclass";
+      }
+    }
+  </script>
+</body>
+</html>

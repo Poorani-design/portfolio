@@ -1,0 +1,69 @@
+.footer
+{
+ padding:1rem 2rem;
+ background-color: $bg-primary;
+
+ color:$text-white;
+ line-height: 2;
+ 
+//footer -section
+
+ &--section
+ {
+  display:$display-flex;
+  margin:2rem;
+  justify-content: space-between;
+  padding:5rem ;
+  
+  //social-media
+
+  &__socialmedia
+  {
+   text-decoration: none;
+   list-style: none;
+
+   & > li> a{
+    color:$text-white;
+   }
+   & > li> a:hover{
+    color:$text-light;
+    text-decoration: underline;
+    transition: 1s;
+   }
+  
+  }
+
+  //skills 
+
+  &__skills
+  {
+   text-decoration: none;
+   list-style: none;
+   & > li> a{
+    color:$text-white;
+   }
+   & > li> a:hover{
+    color:$text-light;
+    text-decoration: underline;
+    transition: 1s;
+   }
+  }
+
+    //tiny projects
+    &__project
+    {
+     text-decoration: none;
+     list-style: none;
+     
+     & > li> a{
+      color:$text-white;
+     }
+     & > li> a:hover{
+      color:$text-light;
+      text-decoration: underline;
+      transition: 1s;
+    }
+
+ }
+}
+}
